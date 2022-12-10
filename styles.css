@@ -1,0 +1,169 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background-image: url('assets/clark-douglas-17ZU9BPy_Q4-unsplash.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+header {
+    font-size: 2.0rem;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  border-style: none;
+  outline: none;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #222;
+  color: rgb(252, 203, 186);
+}
+
+.resname{
+    font-family: 'Tangerine', cursive;
+    font-size: 6rem;
+    font-style: italic;
+}
+
+.button-nav {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem;
+    font-size: 1.2rem;
+    background-color: transparent;
+    border-bottom: 2px solid transparent;
+    transition: transform 0.3s;
+  }
+
+.button-nav.active {
+  border-bottom: 2px solid rgba(224, 184, 184, 0.89);
+}
+
+.button-nav:hover {
+  transform: translateY(-10%);
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem;
+    margin: 6rem 0;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  animation: fadeIn 1.5s;
+}
+
+.home p {
+  padding: 1rem;
+}
+
+.home p:nth-child(1){
+    color: antiquewhite;
+    font-size: 6rem;
+}
+
+.home p:nth-child(2){
+    color: antiquewhite;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.btn{
+    width: 20%;
+    height: 20%;
+    font-size: 1.2rem;
+    padding: 15px;
+    background-color: rgb(6, 156, 51);
+    border-radius: 10px;
+    color: antiquewhite;
+    transition: transform 0.3s;
+}
+
+.btn:hover{
+    transform: translateY(-10%);
+}
+
+/* home page */
+
+
+
+/* Animations */
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  border-top: 1px solid #222;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: antiquewhite;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fa-github {
+  font-size: 2rem;
+  color: antiquewhite;
+}
+
+.fa-github:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
