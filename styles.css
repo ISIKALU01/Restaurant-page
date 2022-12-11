@@ -10,14 +10,14 @@
 
 body {
   font-family: 'Dancing Script', cursive;
-  background-image: url('assets/clark-douglas-17ZU9BPy_Q4-unsplash.jpg');
+  background-image: url('assets/homeimage.jpg');
   background-attachment: fixed;
   background-size: cover;
 }
 
 
 header {
-    font-size: 2.0rem;
+    font-size: 2rem;
 }
 
 h1,
@@ -90,6 +90,8 @@ button {
 }
 
 
+/* home page */
+
 .home {
   display: flex;
   flex-direction: column;
@@ -128,7 +130,7 @@ button {
     transform: translateY(-10%);
 }
 
-/* home page */
+
 
 
 
