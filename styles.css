@@ -85,9 +85,11 @@ button {
     justify-content: space-between;
     padding: 4rem;
     margin: 6rem 0;
-    font-size: 2rem;
+    font-size: 4rem;
     background-color: rgba(0, 0, 0, 0.6);
-}
+  }
+
+
 
 
 /* home page */
@@ -116,7 +118,7 @@ button {
 }
 
 .btn{
-    width: 20%;
+    width: 150px;
     height: 20%;
     font-size: 1.2rem;
     padding: 15px;
@@ -131,6 +133,87 @@ button {
 }
 
 
+/* menu page */
+.menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3.5rem;
+  animation: fadeIn 1.5s;
+  padding: 3rem;
+}
+
+.menutitle{
+  font-size: 4rem;
+  color: rgb(252, 203, 186);
+  animation: fadeIn 1.5s;
+}
+
+
+.menu-info {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* height: 300px; */
+  /* padding: 4rem; */
+  width: 250px;
+  cursor: pointer;
+  color: antiquewhite;
+  transition: background-color 0.3s;
+  padding: 1rem;
+  border: 1px solid #222;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+.img-con{
+  width: auto;
+  overflow: hidden;
+  margin: 0;
+}
+
+.img-con img{
+  display: block;
+  width: 100%;
+}
+
+.menu-info h2 {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.menu-info p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.menu-info span{
+  position: absolute;
+  font-size: 1rem;
+  padding: 1rem;
+  border: 1px solid #222;
+  border-radius: 5px;
+  color: rgb(50, 189, 50);
+  text-align: center;
+  bottom: 2%;
+  font-weight: bold;
+}
+
+.menu-btn{
+  max-width: 100%;
+  width: 150px;
+  font-size: 1.2rem;
+  padding: 15px;
+  background-color: rgb(6, 156, 51);
+  border-radius: 10px;
+  color: antiquewhite;
+  transition: transform 0.3s;
+}
+
+.menu-btn:hover{
+  transform: translateY(-10%);
+}
 
 
 
@@ -169,3 +252,5 @@ button {
 .fa-github:hover {
   color: rgba(0, 0, 0, 0.9);
 }
+
+
