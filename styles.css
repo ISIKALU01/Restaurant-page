@@ -254,3 +254,64 @@ button {
 }
 
 
+/* Media queries */
+
+@media (max-width: 1000px) {
+
+  .resname {
+    font-size: 5rem;
+  }
+
+
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+ 
+}
+
+@media (max-width: 650px) {
+
+  .home {
+    width: 100%;
+  }
+
+  .home p:nth-child(1){
+    font-size: 4rem;
+}
+
+  .header{
+    width: 100%;
+  }
+  .resname {
+    font-size: 4rem;
+  }
+
+  .menu {
+    grid-template-columns: 1fr;
+  }
+
+ 
+}
+
+
+@media (max-width: 400px) {
+
+  .header{
+    width: 100%;
+  }
+
+  .home p {
+    padding: 0.4rem;
+  }
+
+  .home p:nth-child(2){
+    font-size: 1.5rem;
+  }
+
+
+  .resname {
+    font-size: 3rem;
+  }
+ 
+}
