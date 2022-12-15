@@ -21,28 +21,28 @@ function createMenu(){
     menu.appendChild(
         createMenuInfo(
           "Seafood Pasta",
-          "Tomato sauce, Olive oil, Ground Beef, Garlic, Parmesan, Ricotta, Mozzarella, Italian parsely",
+          "Tomato sauce, Olive oil, squid, hardshell clams, blue mussels, clam meat, mussel meat, and shrimp.",
           "$15"
         )
       );
     menu.appendChild(
         createMenuInfo(
           "Spaghetti alle Vongole",
-          "Tomato sauce, Olive oil, Ground Beef, Garlic, Parmesan, Ricotta, Mozzarella, Italian parsely",
+          "A simple combination of pasta, clams, white wine, garlic, tomatoes, Olive oil",
           "$65"
         )
       );
     menu.appendChild(
         createMenuInfo(
           "Pasta alla Norma",
-          "Tomato sauce, Olive oil, Ground Beef, Garlic, Parmesan, Ricotta, Mozzarella, Italian parsely",
+          "Aubergine, olive oil, garlic, San Marzano tomatoes, boccole pasta, basil, ricotta salata",
           "$51"
         )
       );
     menu.appendChild(
         createMenuInfo(
           "Pasta Carbonara",
-          "Tomato sauce, Olive oil, Ground Beef, Garlic, Parmesan, Ricotta, Mozzarella, Italian parsely",
+          "Pasta, bacon, onion, garlic, eggs, Parmesan, black pepper, peas",
           "$52"
         )
       );

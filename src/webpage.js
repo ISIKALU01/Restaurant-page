@@ -14,6 +14,9 @@ function createHeader() {
 
   header.appendChild(resname);
   header.appendChild(createNav());
+  
+
+
 
   return header;
 }
@@ -31,7 +34,7 @@ function createNav() {
   dropDownIcon.src = "assets/dropdown.png"
   dropDownIcon.alt = "dropdown"
  
-  mobileButton.addEventListener("click", ()=>{
+  mobileButton.addEventListener("click", () => {
     if(ul.classList.contains("active")){
       ul.classList.remove("active")
       mobileButton.classList.remove("active")
@@ -40,6 +43,8 @@ function createNav() {
       mobileButton.classList.add("active")
     }
   })
+
+
 
   const nav = document.createElement("nav");
   const ul = document.createElement("ul")
