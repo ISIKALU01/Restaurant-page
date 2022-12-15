@@ -20,10 +20,12 @@ header {
     font-size: 2rem;
 }
 
-h1,
-h2,
-h3 {
+
+
+header h1{
   line-height: 1.2;
+  padding: 1rem;
+
 }
 
 button {
@@ -53,12 +55,14 @@ button {
   background-color: rgba(0, 0, 0, 0.9);
   border-bottom: 1px solid #222;
   color: rgb(252, 203, 186);
+
 }
 
 .resname{
     font-family: 'Tangerine', cursive;
-    font-size: 6rem;
+    font-size: 5rem;
     font-style: italic;
+    max-width: 100%;
 }
 
 .list {
@@ -68,7 +72,7 @@ button {
   column-gap: 20px;
 }
 
-.hamburger {
+.dropDown {
   display: none;
 }
 
@@ -224,7 +228,41 @@ button {
   transform: translateY(-10%);
 }
 
+/* contact */
+.contactCon{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3.5rem;
+  animation: fadeIn 1.5s;
+  padding: 3rem;
+  border: 1px solid #222;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
 
+.content{
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  color: antiquewhite;
+  transition: background-color 0.3s;
+  padding: 1rem;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+.content h1 {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.content p {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
 
 /* Animations */
 
@@ -276,6 +314,10 @@ button {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .contactCon {
+    grid-template-columns: repeat(2, 1fr) ;
+  }
+
  
 }
 
@@ -288,11 +330,12 @@ button {
 
 
   .dropDown{
-    display: block;
-    width: 40%;
-    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    padding: 15px;
     border-radius: 5px;
-    margin-left: 30px;
     color: antiquewhite;
     background-color: transparent;
     font-size: 20px;
@@ -303,7 +346,15 @@ button {
 
 
   .dropDown:hover{
-    transform: translateY(-10%);
+    transform: translateY(-30%);
+  }
+
+  .dropDown.active{
+    margin-left: 38px;
+  }
+
+  .dropDown img{
+    width: 25px;
   }
 
 
@@ -312,8 +363,12 @@ button {
   }
 
   .menubar.active{
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
  }
+
+
 
   .list{
     display: none;
@@ -350,6 +405,10 @@ button {
     grid-template-columns: 1fr;
   }
 
+  .contactCon {
+    grid-template-columns: 1fr ;
+  }
+
 }
 
 
@@ -371,6 +430,14 @@ button {
 
   .resname {
     font-size: 3rem;
+  }
+
+  .button-nav{
+    font-size: 0.8rem;
+  }
+
+  .dropDown.active{
+    margin-left: 26px;
   }
  
 }
