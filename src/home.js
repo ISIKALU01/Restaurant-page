@@ -17,6 +17,9 @@ function createButton(text){
   const button = document.createElement("button")
   button.textContent = text;
   button.classList.add('btn')
+  button.addEventListener("click", ()=>{
+    loadMenu()
+  })
   return button;
 }
   

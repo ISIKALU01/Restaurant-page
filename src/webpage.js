@@ -1,5 +1,6 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadContact from "./contact";
 
 
 function createHeader() {
@@ -17,7 +18,30 @@ function createHeader() {
 }
 
 function createNav() {
+  const mobileHeader = document.createElement("div")
+  const mobileButton = document.createElement("button")
+  const dropDownIcon = document.createElement("img")
+
+  mobileHeader.classList.add("mobile-header")
+  mobileHeader.appendChild(mobileButton)
+
+  mobileButton.classList.add("dropDown")
+  mobileButton.appendChild(dropDownIcon)
+  dropDownIcon.src = "assets/dropdown.png"
+  dropDownIcon.alt = "dropdown"
+ 
+  mobileButton.addEventListener("click", ()=>{
+    if(ul.classList.contains("active")){
+      ul.classList.remove("active")
+    }else{
+      ul.classList.add("active")
+    }
+  })
+
   const nav = document.createElement("nav");
+  const ul = document.createElement("ul")
+  nav.classList.add('menubar')
+  ul.classList.add('list')
 
   const homeButton = document.createElement("button");
   homeButton.classList.add("button-nav");
@@ -41,14 +65,25 @@ function createNav() {
   const contactButton = document.createElement("button");
   contactButton.classList.add("button-nav");
   contactButton.textContent = "Contact";
- 
+  contactButton.addEventListener("click", (e) => {
+    if (e.target.classList.contains("active")) return;
+    activateButton(contactButton);
+    loadContact();
+  })
+  
 
-  nav.appendChild(homeButton);
-  nav.appendChild(menuButton);
-  nav.appendChild(contactButton);
+ 
+  ul.appendChild(homeButton);
+  ul.appendChild(menuButton);
+  ul.appendChild(contactButton);
+  
+  nav.appendChild(mobileHeader)
+  nav.appendChild(ul)
 
   return nav;
 }
+
+
 
 function activateButton(button) {
   const buttons = document.querySelectorAll(".button-nav");
@@ -96,8 +131,7 @@ function setWebsite() {
   content.appendChild(createHeader());
   content.appendChild(createMain());
   content.appendChild(createFooter());
-
-  
+  activateButton(document.querySelector(".button-nav"))
   loadHome();
 }
 

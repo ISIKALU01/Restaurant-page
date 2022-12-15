@@ -1,3 +1,3 @@
-import setWebsite from "./webapp";
+import setWebsite from "./webpage";
 
 setWebsite();
