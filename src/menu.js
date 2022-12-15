@@ -1,3 +1,5 @@
+import loadContact from "./contact";
+
 function createMenu(){
     const menu = document.createElement("div")
     menu.classList.add("menu")
@@ -79,9 +81,20 @@ function createMenuInfo(type, aboutType, price){
 }
 
 function createButton(text){
+  const buttons = document.querySelectorAll(".button-nav")
   const button = document.createElement("button")
   button.textContent = text;
-  button.classList.add('menu-btn')
+  button.classList.add('btn')
+  button.addEventListener("click", ()=>{
+    buttons.forEach((button) =>{
+      if(button !== this){
+        button.classList.remove("active");
+      }
+    })
+    const btn3 = document.querySelector(".three")
+    btn3.classList.add("active")
+    loadContact()
+  })
   return button;
 }
 

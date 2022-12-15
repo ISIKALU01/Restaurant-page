@@ -3,6 +3,7 @@ import loadMenu from "./menu";
 import loadContact from "./contact";
 
 
+
 function createHeader() {
   const header = document.createElement("header");
   header.classList.add("header");
@@ -19,7 +20,7 @@ function createHeader() {
 
 function createNav() {
   const mobileHeader = document.createElement("div")
-  const mobileButton = document.createElement("button")
+  const mobileButton = document.createElement("div")
   const dropDownIcon = document.createElement("img")
 
   mobileHeader.classList.add("mobile-header")
@@ -33,8 +34,10 @@ function createNav() {
   mobileButton.addEventListener("click", ()=>{
     if(ul.classList.contains("active")){
       ul.classList.remove("active")
+      mobileButton.classList.remove("active")
     }else{
       ul.classList.add("active")
+      mobileButton.classList.add("active")
     }
   })
 
@@ -54,6 +57,7 @@ function createNav() {
 
   const menuButton = document.createElement("button");
   menuButton.classList.add("button-nav");
+  menuButton.classList.add("two")
   menuButton.textContent = "Menu";
   menuButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
@@ -64,6 +68,7 @@ function createNav() {
 
   const contactButton = document.createElement("button");
   contactButton.classList.add("button-nav");
+  contactButton.classList.add("three")
   contactButton.textContent = "Contact";
   contactButton.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;

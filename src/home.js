@@ -1,3 +1,7 @@
+import loadMenu from "./menu";
+
+
+
 function createHome() {
   const home = document.createElement("div");
   home.classList.add("home");
@@ -13,11 +17,20 @@ function createParagraph(text) {
   return paragraph;
 }
 
+
 function createButton(text){
+  const buttons = document.querySelectorAll(".button-nav")
   const button = document.createElement("button")
   button.textContent = text;
   button.classList.add('btn')
   button.addEventListener("click", ()=>{
+    buttons.forEach((button) =>{
+      if(button !== this){
+        button.classList.remove("active");
+      }
+    })
+    const btntwo = document.querySelector(".two")
+    btntwo.classList.add("active")
     loadMenu()
   })
   return button;
