@@ -302,7 +302,7 @@ button {
   }
 
 
-  .hamburger:hover{
+  .dropDown:hover{
     transform: translateY(-10%);
   }
 
