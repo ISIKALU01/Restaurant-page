@@ -119,6 +119,16 @@ button {
   align-items: center;
   width: 600px;
   animation: fadeIn 1.5s;
+  padding: 15px;
+  
+}
+
+.homeContentCon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
 }
 
 .home p {
@@ -132,8 +142,9 @@ button {
 
 .home p:nth-child(2){
     color: antiquewhite;
-    font-size: 2rem;
+    font-size: 4rem;
     margin-bottom: 10px;
+    font-family: 'Tangerine', cursive;
 }
 
 .btn{
@@ -145,11 +156,64 @@ button {
     border-radius: 10px;
     color: antiquewhite;
     transition: transform 0.3s;
+    margin-bottom: 1.5rem;
 }
 
 .btn:hover{
     transform: translateY(-10%);
 }
+
+.homeAbout {
+    margin-top: 150px;
+    align-self: center;
+}
+
+.about-us {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  padding: 6rem;
+}
+
+.about-us h1 {
+  font-size: 5rem;
+  color: antiquewhite;
+  align-self: flex-start;
+}
+
+.about-img-text {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 3rem;
+  
+}
+
+.about-img {
+  width: 50%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.about-img img {
+  display: block;
+  width: 100%;
+}
+
+
+.about-text {
+  font-size: 3rem;
+  color: antiquewhite;
+  width: 50%;
+  font-family:'Tangerine', cursive;
+
+}
+
 
 
 /* menu page */
@@ -199,6 +263,7 @@ button {
   font-size: 1.5rem;
   text-align: center;
   margin-bottom: 40px;
+  padding: 1rem;
 }
 
 .menu-info span{
@@ -303,11 +368,25 @@ button {
 
 /* Media queries */
 
-@media (max-width: 1000px) {
+@media (min-width: 1200px) {
+  .about-text {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .main {
+    padding: 0;
+  }
 
   .resname {
     font-size: 5rem;
   }
+
+  .home p:nth-child(2){
+    font-size: 3rem;
+}
 
 
   .menu {
@@ -318,10 +397,63 @@ button {
     grid-template-columns: repeat(2, 1fr) ;
   }
 
+  .about-img-text {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .about-img img {
+    width: 100%;
+    padding: 2rem;
+  }
+
+
+  .about-text {
+    width: 100%;
+    font-size: 3rem;
+    padding: 1rem;
+  }
+
  
 }
 
+@media (max-width: 799px) {
+  .main {
+    padding: 0;
+  }
+
+  .about-img-text {
+    padding: 1rem;
+  }
+
+  .about-img img {
+    padding: 1rem;
+  }
+
+  .contact {
+    padding: 2rem;
+  }
+
+  .contactCon {
+    padding: 2rem;
+  }
+
+  .menutitle {
+    padding: 1rem;
+  }
+}
+
+
 @media (max-width: 650px) {
+  .main {
+    padding: 0;
+  }
+
   .mobileHeader {
     width: 100%;
     display: flex;
@@ -384,10 +516,14 @@ button {
     animation: fadeIn 1.5s;
   }
 
+ 
+ 
+
 
 /* main */
   .home {
     width: 100%;
+    padding: 2rem;
   }
 
   .home p:nth-child(1){
@@ -401,6 +537,23 @@ button {
     font-size: 4rem;
   }
 
+  .homeAbout {
+    padding: 2rem;
+  }
+
+  .about-us {
+    padding: 0.3rem;
+  }
+
+  .about-us h1 {
+    font-size: 3rem;
+  }
+
+  .about-img-text {
+    padding: 1rem;
+  }
+ 
+
   .menu {
     grid-template-columns: 1fr;
   }
@@ -409,11 +562,23 @@ button {
     grid-template-columns: 1fr ;
   }
 
+  .menutitle {
+    font-size: 3.5rem;
+    /* margin-top: 2rem */
+    padding: 2rem;
+  }
+
+ 
+
 }
 
 
 
 @media (max-width: 400px) {
+
+  .main {
+    padding: 0rem;
+  }
 
   .header{
     width: 100%;
@@ -424,7 +589,7 @@ button {
   }
 
   .home p:nth-child(2){
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
 
@@ -439,5 +604,32 @@ button {
   .dropDown.active{
     margin-left: 26px;
   }
+
+  .home {
+    padding: 2rem;
+  }
+
+  .homeAbout {
+    padding: 1rem;
+  }
+
+  .about-us {
+    padding: 0.3rem;
+  }
+
+  .about-us h1 {
+    font-size: 3rem;
+  }
+
+  .about-img-text {
+    padding: 1rem;
+  }
+
+  .menutitle {
+    font-size: 2.5rem;
+    margin-top: 1rem;
+  }
+
+  
  
 }
